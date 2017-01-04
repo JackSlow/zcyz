@@ -25,12 +25,7 @@
 <!-- cart -->
 <!-- the jScrollPane script -->
 <script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
-		<script type="text/javascript" id="sourcecode">
-			$(function()
-			{
-				$('.scroll-pane').jScrollPane();
-			});
-		</script>
+
 <!-- //the jScrollPane script -->
 <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="js/prototype.js"></script>
@@ -59,13 +54,13 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<h1 class="navbar-brand"><a  href="index.html">Find</a></h1>
+					<h1 class="navbar-brand"><a  href="main.aspx">Find</a></h1>
 				</div>
 				<!--navbar-header-->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li><a href="main.aspx" class="active">首页</a></li>
-						<li class="dropdown">
+					<%--	<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">摄影<b class="caret"></b></a>
 							<ul class="dropdown-menu multi-column columns-4">
 								<div class="row">
@@ -99,19 +94,19 @@
 										<ul class="multi-column-dropdown">
 										
 		                                    <%=types %>
-											<%--<li><a class="list" href="type.aspx">人文</a></li>
+											<li><a class="list" href="type.aspx">人文</a></li>
 											<li><a class="list" href="products.html">动物</a></li>
 											<li><a class="list" href="products.html">环境</a></li>
 											<li><a class="list" href="products.html">旅行</a></li>
 
-											<li><a class="list" href="products.html">科技</a></li>--%>
+											<li><a class="list" href="products.html">科技</a></li>
 										</ul>
 									</div>
 
 
 								</div>
 							</ul>
-						</li>				
+						</li>	--%>			
 
 
 					</ul> 
@@ -242,6 +237,13 @@
 		$('.more').on('click',showBg);
         var spryselect1 = new Spry.Widget.ValidationSelect("spryselect1");
     </script>
+
+        <script type="text/javascript" id="sourcecode">
+			$(function()
+			{
+				$('.scroll-pane').jScrollPane();
+			});
+		</script>
 
     </div>
     </form>

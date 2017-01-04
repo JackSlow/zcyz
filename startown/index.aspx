@@ -50,7 +50,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<h1 class="navbar-brand"><a  href="index.html">Find</a></h1>
+					<h1 class="navbar-brand"><a  href="index.aspx">Find</a></h1>
 				</div>
 				<!--navbar-header-->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -125,7 +125,7 @@
 									<label for="password">密码</label>
 									<input type="password" id="psd" runat="server" >
 								</fieldset>
-								<p style="font-size:18px; color:#999; display:block; float:left; margin-left:50px;">用户类型：</p><select id="admin" runat="server" style=" float:left; height:20px;"><option value="0">普通用户</option><option value="1">管理员</option></select>
+								<p style="font-size:18px; color:#999; display:block; float:left; margin-left:50px;">用户类型：</p><select id="admin" runat="server" style=" float:left; height:20px;"><option value="2">普通用户</option><option value="1">管理员</option></select>
 									<input type="submit" value="登录" id="login" runat="server" onserverclick="login_ServerClick" />
 								<label for="checkbox"><input type="checkbox" id="checkbox"> <i>记住密码</i></label>
 							</fieldset>

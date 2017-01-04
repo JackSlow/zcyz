@@ -48,8 +48,8 @@ public partial class index : System.Web.UI.Page
 
         string name = username.Value;
         string password = psd.Value;
-        string power = admin.Value;
-        string sql = "select * from admins where adminname='" + name + "' and password='" + password + "' and power='" + power + "'";
+        int power = Convert.ToInt16(admin.Value);
+        string sql = "select * from admins where adminname='" + name + "' and password='" + password + "' and power=" + power + "";
 
         DataSet ds = DBHelper.getDS(sql);
 
@@ -60,13 +60,13 @@ public partial class index : System.Web.UI.Page
             HttpCookie cookie = new HttpCookie("aspcn");
             cookie.Value = username.Value;
             Response.AppendCookie(cookie);
-            if (power == "1")
+            if (power == 1)
             {
                 Response.Redirect("backindex.aspx");
             }
             else
             {
-                Response.Redirect("main.aspx");
+                Response.Redirect("person.aspx");
             }
 
 
