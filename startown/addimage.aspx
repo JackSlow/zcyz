@@ -60,8 +60,8 @@
                             <div class="form_list"><label class="lable_title">图片上传</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:FileUpload ID="FileUpload1" runat="server" /></div>
                             
                             <div class="form_list"><label class="lable_title">是否推荐</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="isrecommend" value="1">&nbsp;&nbsp;推荐&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="isrecommend" value="0">&nbsp;&nbsp;不推荐</div>
-                            
-                            <div class="form_list"><input type="submit" class="submit" value="&nbsp;&nbsp;提&nbsp;&nbsp;交&nbsp;&nbsp;" id="Submit1" runat="server" onserverclick="Submit1_ServerClick"></div>
+
+                             <div class="form_list"><input type="submit" class="submit" value="&nbsp;&nbsp;提&nbsp;&nbsp;交&nbsp;&nbsp;" id="Submit1" runat="server" onserverclick="Submit1_ServerClick"/></div>
                          </form>   
                            
                           

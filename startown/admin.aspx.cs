@@ -39,8 +39,23 @@ public partial class admin : System.Web.UI.Page
             string id = ds.Tables[0].Rows[i]["id"].ToString();
             string name = ds.Tables[0].Rows[i]["adminname"].ToString();
             string psw = ds.Tables[0].Rows[i]["password"].ToString();
-            string pow = ds.Tables[0].Rows[i]["powername"].ToString();
-            printadmin += "<tr><td>" + id + "</td><td>" + name + "</td><td>" + psw + "</td><td>" + pow + "</td><td>"
+            int pow = Convert.ToInt16(ds.Tables[0].Rows[i]["power"]);
+            string powername = "";
+            switch (pow)
+            {
+                case 0:
+                    powername = "超级管理员";
+                    break;
+                case 1:
+                    powername = "管理员";
+                    break;
+                case 2:
+                    powername = "用户";
+                    break;
+
+            }
+
+            printadmin += "<tr><td>" + id + "</td><td>" + name + "</td><td>" + psw + "</td><td>" + powername + "</td><td>"
                     + "<a class=\"btn\" href=\"editadmin.aspx?id=" + id + "\" title=\"修改\"><i class=\"icon-inbox\"></i></a><a class=\"btn\" href=\"admin.aspx?action=del&id=" + id + "\" title=\"删除\"><i class=\"icon-trash\"></i></a></td></tr>";
         }
     }

@@ -67,6 +67,7 @@
                            <span>用户管理</span><span>></span>
                            <span>用户管理</span>
                            <a  href="addadmin.aspx" class="label label-warning" style="float:right; margin:8px;">添加</a>
+                              
                          </div>
                         <div class="well brown">
                             
@@ -78,7 +79,7 @@
                                             <th width="10%">ID</th>
                                             <th width="20%">用户名</th>
                                             <th width="20%">密码</th>
-                                            <th width="20%">类型</th>
+                                            <th width="20%">角色</th>
                                             <th width="20%">管理操作</th>
                                         </tr>
                                     </thead>

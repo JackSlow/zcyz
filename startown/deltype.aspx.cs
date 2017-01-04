@@ -31,7 +31,7 @@ public partial class deltype : System.Web.UI.Page
     protected void Submit1_ServerClick(object sender, EventArgs e)
     {
         string tid = Request.Form["typedel"];
-        string sql = "DELETE FROM types WHERE id='" + tid + "'";
+        string sql = "DELETE FROM types WHERE id=" + tid + "";
         int n = DBHelper.exeUpdate(sql);
         if (n == 1)
         {

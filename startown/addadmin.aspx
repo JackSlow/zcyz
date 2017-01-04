@@ -43,7 +43,7 @@
                             <div class="form_list"><label class="lable_title">确认密码</label><input class="form_input" type="text" id="Text3" runat="server"/></div>
               
   
-                            <div class="form_list"><label class="lable_title">状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="ql" value="用户">&nbsp;&nbsp;用户&nbsp;&nbsp;&nbsp;<input type="radio" name="ql" value="普通管理员">&nbsp;&nbsp;普通管理员&nbsp;&nbsp;<input type="radio" name="ql" value="超级管理员">&nbsp;&nbsp;超级管理员</div>
+                            <div class="form_list"><label class="lable_title">状&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;态</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="ql" value="2">&nbsp;&nbsp;用户&nbsp;&nbsp;&nbsp;<input type="radio" name="ql" value="1">&nbsp;&nbsp;普通管理员&nbsp;&nbsp;<input type="radio" name="ql" value="0">&nbsp;&nbsp;超级管理员</div>
                           
                             <div class="form_list"><input type="submit" class="submit" value="&nbsp;&nbsp;提&nbsp;&nbsp;交&nbsp;&nbsp;" id="Submit1" runat="server" onserverclick="Submit1_ServerClick"></div>
                          </form>   

@@ -33,9 +33,9 @@ public partial class addadmin : System.Web.UI.Page
         {
             string name = Text1.Value;
             string psw = Text2.Value;
-            string pow = Request.Form["ql"];
+            int pow =Convert.ToInt16(Request.Form["ql"]);
 
-            string sql = "insert into admins(adminname,password,powername) values('" + name + "','" + psw + "','" + pow + "')";
+            string sql = "insert into admins(adminname,password,power) values('" + name + "','" + psw + "','" + pow + "')";
             string sql1 = "insert into pson(personname,collected) values('" + name + "',0)";
             DBHelper.exeUpdate(sql);
             DBHelper.exeUpdate(sql1);
