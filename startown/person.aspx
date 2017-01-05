@@ -16,29 +16,8 @@
 <link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
  <link rel="stylesheet" href="css/font-awesome.min.css"/>
-<!-- js -->
-<script src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
-<!-- //js -->	
-<!-- cart -->
-<script src="js/simpleCart.min.js"> </script>
-<!-- cart -->
-<!-- the jScrollPane script -->
-<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
-
-<!-- //the jScrollPane script -->
-<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
-<script type="text/javascript" src="js/prototype.js"></script>
-
-<script type="text/javascript" src="js/scriptaculous.js?load=effects"></script>
-
-<script type="text/javascript" src="js/lightbox.js"></script>
-
 <link href="css/person.css" rel="stylesheet" type="text/css">
 <link href="SpryAssets/SpryValidationSelect.css" rel="stylesheet" type="text/css">
-<script src="js/jquery.min.js"></script>
-<script src="js/jss.js"></script>
-<script src="SpryAssets/SpryValidationSelect.js" type="text/javascript"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -162,7 +141,7 @@
                                         <div class="newsCon-b">
                                         <%=printImg %>
                                         	<div class="b1">
-                                               <a href="#" data-content="c1" class="more">+上传图片</a>
+                                               <a href="javascript:;" id="more" data-content="c1" class="more">+上传图片</a>
                                             </div>
                                         </div>
                                     </div>
@@ -219,14 +198,31 @@
           <div class="c2">
           </div>
          </div> 
-         
+    </div>
+    </form>
+    <!-- js -->
+    <script src="js/jquery.min.js"></script>
+<%--
+<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+<script src="js/simpleCart.min.js"> </script>
+<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
+
+<!-- //the jScrollPane script -->
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/prototype.js"></script>
+
+<script type="text/javascript" src="js/scriptaculous.js?load=effects"></script>
+
+<script type="text/javascript" src="js/lightbox.js"></script>     
+<script src="js/jss.js"></script>
+<script src="SpryAssets/SpryValidationSelect.js" type="text/javascript"></script>--%>
     <script type="text/javascript">
 //显示灰色 jQuery 遮罩层
         function showBg() {
-			var contentClass= $(this).attr('data-content');
-			$('.jj').append($('.'+contentClass).clone());
-			  $(".fullbg").show();
-			$('.dialog').show();
+             var contentClass= $(this).attr('data-content');
+			    $('.jj').append($('.'+contentClass).clone());
+			    $(".fullbg").show();
+			    $('.dialog').show();
 		}
 		
         //关闭灰色 jQuery 遮罩
@@ -234,18 +230,19 @@
             $(".fullbg,.dialog").hide();
 			$('.jj').empty();
         }
-		$('.more').on('click',showBg);
-        var spryselect1 = new Spry.Widget.ValidationSelect("spryselect1");
+        $(function () { 
+                $('#more').on('click',showBg);
+        });
     </script>
 
-        <script type="text/javascript" id="sourcecode">
+<%--        <script type="text/javascript" id="sourcecode">
 			$(function()
 			{
+               
+           var spryselect1 = new Spry.Widget.ValidationSelect("spryselect1");
 				$('.scroll-pane').jScrollPane();
 			});
-		</script>
+		</script>--%>
 
-    </div>
-    </form>
 </body>
 </html>

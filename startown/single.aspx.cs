@@ -25,7 +25,6 @@ public partial class single : System.Web.UI.Page
             DataTable dt = DBHelper.GetDataSet(sql);
             if (dt.Rows.Count > 0)
             {
-
                 txtname.Value = dt.Rows[0]["personname"].ToString();
                 persid.Value = dt.Rows[0]["id"].ToString();
 

@@ -102,9 +102,9 @@ public partial class Products : System.Web.UI.Page
     void shop(string surl)
     {
         string peid = persid.Value;
-        string sql1 = "insert into shop(surl,stypeid) values('" + surl + "','" + peid + "') ";
+        string sql1 = "insert into shop(surl,stypeid,shoped) values('" + surl + "','" + peid + "',0) ";
         DBHelper.exeUpdate(sql1);
-        string sql4 = "UPDATE shopp SET shoped = shoped+1 WHERE id=" + peid;
+        string sql4 = "UPDATE shop SET shoped = shoped+1 WHERE id=" + peid;
         DBHelper.exeUpdate(sql4);
         
         Response.Write("<script>window.location='single.aspx?surl="+surl+"';</script>");

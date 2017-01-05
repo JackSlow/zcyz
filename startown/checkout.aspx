@@ -118,14 +118,14 @@
 		<div class="container">
 
 			<h2 style="font-family: '幼圆'">我的购物车</h2>
-			<script>$(document).ready(function(c) {
-				$('.close1').on('click', function(c){
-					$('.cart-header').fadeOut('slow', function(c){
-						$('.cart-header').remove();
-					});
-					});	  
-				});
-			</script>
+            <script>$(document).ready(function (c) {
+    $('.close1').on('click', function (c) {
+
+        var aa = $(this).parent();
+        aa.hide();
+    });
+});
+            </script>
 			<%=jiagou%>
 
 
